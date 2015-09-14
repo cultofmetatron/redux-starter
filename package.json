@@ -1,0 +1,14 @@
+{
+  "name": "redux-starter",
+  "version": "0.0.0",
+  "description": "an isomorphic redux starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "redux"
+  ],
+  "author": "cultofmetatron",
+  "license": "MIT"
+}
