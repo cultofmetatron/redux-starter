@@ -12,18 +12,20 @@
   "author": "cultofmetatron",
   "license": "MIT",
   "dependencies": {
-    "babel": "^5.8.23",
     "bluebird": "^2.10.1",
     "express": "^4.13.3",
     "firebase": "^2.2.9",
     "immutable": "^3.7.5",
     "knex": "^0.8.6",
+    "lodash": "^3.10.1",
     "pg": "^4.4.2",
     "ramda": "^0.17.1",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "redux": "^3.0.0",
-    "rx": "^3.1.2"
+    "rx": "^3.1.2",
+    "uuid": "^2.0.1",
+    "webpack": "^1.12.2"
   },
   "devDependencies": {
     "chai": "^3.2.0",
