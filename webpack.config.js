@@ -5,10 +5,10 @@ module.exports = {
   entry:  [
     'webpack-dev-server/client?http://127.0.0.1:8080/',
     'webpack/hot/only-dev-server',
-    './client'
+    './src/client'
   ],
   output: {
-    path:     path.join(__dirname, 'dist'),
+    path:     path.join(__dirname, 'build', 'client'),
     filename: 'bundle.js'
   },
   resolve: {
