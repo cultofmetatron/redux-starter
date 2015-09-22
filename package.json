@@ -10,5 +10,32 @@
     "redux"
   ],
   "author": "cultofmetatron",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.10.0",
+    "express": "^4.13.3",
+    "immutable": "^3.7.5",
+    "knex": "^0.8.6",
+    "pg": "^4.4.1",
+    "ramda": "^0.17.1",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "redux": "^3.0.0",
+    "rx": "^3.1.2"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "mocha": "^2.3.2",
+    "babel": "^5.8.23",
+    "deprecated": "0.0.1",
+    "gulp-babel": "^5.2.1",
+    "gulp-flowtype": "^0.4.7",
+    "gulp-mocha": "^2.1.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.6",
+    "orchestrator": "^0.3.7",
+    "run-sequence": "^1.1.2",
+    "vinyl-fs": "^1.0.0"
+  }
 }
