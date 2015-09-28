@@ -1,6 +1,11 @@
-"use strict";
+'use strict';
 
-(function () {
-  return "hello world";
+var express = require('express');
+var app = express();
+
+app.use(function (req, res, next) {
+  return res.send({ message: 'awesome' });
 });
-//# sourceMappingURL=../server/index.js.map
+
+console.log(process.env.FOONAR);
+app.listen(3000);

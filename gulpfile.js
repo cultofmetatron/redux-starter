@@ -8,6 +8,9 @@ var path = require('path');
 var _ = require('lodash');
 var src_dir = 'src';
 var build_dir = 'build';
+var nodemon = require('gulp-nodemon');
+var env = require('gulp-env');
+var _ = require('lodash')
 
 gulp.task('babel', function() {
   return gulp.src(_.map(['shared', 'server'], function(folder) {
@@ -19,16 +22,40 @@ gulp.task('babel', function() {
   .on('error', function(err) { console.log(err); });
 });
 
+gulp.task('set-env', function () {
+  env({
+    file: ".env",
+    vars: {
+        //any vars you want to overwrite
+    }
+  });
+  
+});
+
 gulp.task('webpack', function() {
   return gulp.src(_.map(['client'], function(folder) {
     return path.join(__dirname, src_dir, folder) + '**/*.js'
   }))
+})
 
+gulp.task('nodemon', function () {
+  env({
+    file: ".env",
+    vars: {
+        //any vars you want to overwrite
+    }
+  });
 
-
+  nodemon({
+    script: path.join(__dirname, 'build', 'server', 'index.js')
+  , ext: 'js html'
+  , env: { 'NODE_ENV': 'development' }
+  })
 })
 
 
-
+gulp.task('run-server', () => {
+  runSequence('babel', 'nodemon');
+})
 
 
